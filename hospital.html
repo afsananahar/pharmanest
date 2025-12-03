@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Directory</title>
+  <link rel="stylesheet" href="hospital.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+
+   <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="PH1.png" alt="PharmaNest Logo">
+      <span>PharmaNest</span>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="doctor-directory.html">Doctors</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="Medicine.html">Medicine</a></li>
+        <li><a href="lab-test.html">Lab Test</a></li>
+        <li><a href="ambulance.html">Ambulance</a></li>
+        <li><a href="home-service.html">Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="header-right">
+      <button class="lang-btn" onclick="switchLanguage()">EN | বাংলা</button>
+     
+    </div>
+  </header>
+
+ 
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.querySelector('i').classList.toggle('fa-bars');
+      menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+
+
+<body>
+  <div class="container">
+    <h1>Find a Hospital</h1>
+
+    <!-- Search & Filters -->
+    <div class="filters">
+      <input type="text" placeholder="Search Hospital Name...">
+      <select>
+        <option value="">All Locations</option>
+      
+         <option>Mainamati</option>
+          <option>Alekhar Chor</option>
+          <option>Racecourse</option>
+          <option>Police Line</option>
+          <option>Jaotaola</option>
+          <option>Badurtala</option>
+          <option>Nazrul Aveue</option>
+          <option>Kandirpar</option>
+          <option>Kandirpar</option>
+
+      </select>
+      <select>
+        <option value="">Hospital Type</option>
+        <option>General</option>
+        <option>Specialized</option>
+        <option>Clinic</option>
+      </select>
+      <select>
+        <option value="">Services</option>
+        <option>Emergency</option>
+        <option>ICU</option>
+        <option>Diagnostic</option>
+      </select>
+      <button><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map" style="width: 100%; height: 400px;">
+  <iframe 
+    src="https://www.openstreetmap.org/export/embed.html?bbox=91.1705,23.4500,91.2000,23.4800&layer=mapnik" 
+    style="border:0; width:100%; height:100%;" 
+    allowfullscreen 
+    loading="lazy">
+  </iframe>
+</div>
+
+    <!-- Hospital List for Comilla -->
+<div class="hospital-list">
+  <div class="hospital-card">
+    <h3>Cumilla Medical College  Hospital</h3>
+    <p><i class="fas fa-location-dot"></i> Kuchaitoli, Dr Akhtar Hameed Khan Rd, Cumilla 3500</p>
+    <p><i class="fas fa-phone"></i> 0816-5401</p>
+    <p><i class="fas fa-star"></i> Rating: 4.2</p>
+    <button>View Details</button>
+  </div>
+
+  <div class="hospital-card">
+    <h3>General Hospital, Cumilla</h3>
+    <p><i class="fas fa-location-dot"></i> Sadar Hospital Rd, Cumilla</p>
+    <p><i class="fas fa-phone"></i> +880- 017381</p>
+    <p><i class="fas fa-star"></i> Rating: 4.2</p>
+    <button>View Details</button>
+  </div>
+
+  <div class="hospital-card">
+    <h3>Comilla Sadar Hospital</h3>
+    <p><i class="fas fa-location-dot"></i> Sadar Hospital Rd, Comilla</p>
+    <p><i class="fas fa-phone"></i> +880-081-xxxxxxx</p>
+    <p><i class="fas fa-star"></i> Rating: 4.1</p>
+    <button>View Details</button>
+  </div>
+
+  <div class="hospital-card">
+    <h3>Moon Hospital Limited</h3>
+    <p><i class="fas fa-location-dot"></i> Shahid Khawaja Nizamuddin Rd, Cumilla 3500</p>
+    <p><i class="fas fa-phone"></i> +880- 01766-556655</p>
+    <p><i class="fas fa-star"></i> Rating: 3.7</p>
+    <button>View Details</button>
+  </div>
+
+<div class="hospital-card">
+    <h3>Cumilla Medical Center</h3>
+    <p><i class="fas fa-location-dot"></i> 225 Laksham Rd, Cumilla 3500</p>
+    <p><i class="fas fa-phone"></i> +880- 01711-144786</p>
+    <p><i class="fas fa-star"></i> Rating: 3.9</p>
+    <button>View Details</button>
+  </div>
+
+  <div class="hospital-card">
+    <h3>Gomati Hospital</h3>
+    <p><i class="fas fa-location-dot"></i> Nazrul Ave, Cumilla 3500</p>
+    <p><i class="fas fa-phone"></i> +880- 01711-798083</p>
+    <p><i class="fas fa-star"></i> Rating: 3.7</p>
+    <button>View Details</button>
+  </div>
+
+  <div class="hospital-card">
+    <h3>Modern Hospital</h3>
+    <p><i class="fas fa-location-dot"></i> Laksam Road, Shaktola, Cumilla – 3500 </p>
+    <p><i class="fas fa-phone"></i> +880- 01711-785199</p>
+    <p><i class="fas fa-star"></i> Rating: 4.0</p>
+    <button>View Details</button>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>About PharmaNest</h3>
+      <p>PharmaNest is your one-stop solution for booking doctors, ordering medicines, calling ambulance, and accessing healthcare services online.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support@ehealth.com</p>
+      <p>Phone: +880 1234 567890</p>
+      <p>Address: Cumilla, Bangladesh</p>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section policies">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+<div class="footer-section payments">
+  <h3>We Accept</h3>
+ <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="Mas.png" alt="MasterCard">
+       
+        <img src="bkash.png" alt="Bkash">
+         <img src="nagad.png" alt="Nagad">
+        <img src="Roket.png" alt="Rocket">
+      </div>
+</div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PharmaNest. All Rights Reserved. Design by Nafiz and Afsan.
+  </div>
+</footer>
+
+
+</body>
+</html>

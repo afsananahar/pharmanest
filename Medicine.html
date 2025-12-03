@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Medicine.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+   <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="PH1.png" alt="PharmaNest Logo">
+      <span>PharmaNest</span>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctor-directory.html">Doctors</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="#">Medicine</a></li>
+        <li><a href="lab-test.html">Lab Test</a></li>
+        <li><a href="home-service.html">Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="header-right">
+      <button class="lang-btn" onclick="switchLanguage()">EN | বাংলা</button>
+     
+    </div>
+  </header>
+
+ 
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.querySelector('i').classList.toggle('fa-bars');
+      menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+
+<body>
+  <div class="site">
+    <header class="topbar">
+      <div class="brand">
+    
+       
+      </div>
+
+      <div class="search-area">
+        <input type="text" placeholder="Search for medicine (e.g. Paracetamol)" />
+        <button class="btn search-btn"><i class="fa fa-search"></i> Search</button>
+      </div>
+
+      <div class="top-actions">
+        <button class="btn secondary"><i class="fa fa-prescription-bottle"></i> Prescription</button>
+        <button class="btn"><i class="fa fa-shopping-cart"></i> Cart <span class="cart-count">0</span></button>
+      </div>
+    </header>
+
+    <main class="container">
+      <aside class="filters">
+        <h3>Filters</h3>
+
+        <label>Category</label>
+        <select>
+          <option value="">All Categories</option>
+          <option>Pain Killer</option>
+          <option>Antibiotic</option>
+          <option>Supplement</option>
+          <option>Diabetes</option>
+        </select>
+
+        <label>Services</label>
+        <div class="checkboxes">
+          <label><input type="checkbox"/> Home Delivery</label>
+          <label><input type="checkbox"/> Consultation</label>
+          <label><input type="checkbox"/> In Stock</label>
+        </div>
+
+        <label>Rating</label>
+        <select>
+          <option value="">All</option>
+          <option>4.5+</option>
+          <option>4.0+</option>
+          <option>3.5+</option>
+        </select>
+
+        <button class="btn full">Apply</button>
+      </aside>
+
+      <section class="product-area">
+        <div class="product-header">
+          <h2>Medicine List</h2>
+          <p class="muted">Showing 8 results</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product Card 1 -->
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Paracetamol" alt="Paracetamol">
+            </div>
+            <div class="med-body">
+              <h3>Paracetamol 500mg</h3>
+              <p class="med-desc">Used to relieve pain and reduce fever</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> ACME Pharma</p>
+              <div class="med-footer">
+                <span class="price">৳ 18 / strip</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Amoxicillin" alt="Amoxicillin">
+            </div>
+            <div class="med-body">
+              <h3>Amoxicillin 500mg</h3>
+              <p class="med-desc">Antibiotic (Requires doctor's prescription)</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> HealthCorp</p>
+              <div class="med-footer">
+                <span class="price">৳ 55 / strip</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Vitamin+D" alt="Vitamin D">
+            </div>
+            <div class="med-body">
+              <h3>Vitamin D3 1000IU</h3>
+              <p class="med-desc">Supports bone strength and vitamin balance</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> NutriPlus</p>
+              <div class="med-footer">
+                <span class="price">৳ 220 / bottle</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Glibenclamide" alt="Glibenclamide">
+            </div>
+            <div class="med-body">
+              <h3>Glibenclamide 5mg</h3>
+              <p class="med-desc">Used to control diabetes (Doctor’s advice required)</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> PharmaWell</p>
+              <div class="med-footer">
+                <span class="price">৳ 75 / strip</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- More sample cards -->
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Cough+Syrup" alt="Cough Syrup">
+            </div>
+            <div class="med-body">
+              <h3>Cough Syrup 100ml</h3>
+              <p class="med-desc">Used for cough and respiratory relief</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> SyrupLabs</p>
+              <div class="med-footer">
+                <span class="price">৳ 150</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Antacid" alt="Antacid">
+            </div>
+            <div class="med-body">
+              <h3>Antacid Tablet</h3>
+              <p class="med-desc">Used for acidity and indigestion</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> DigestPro</p>
+              <div class="med-footer">
+                <span class="price">৳ 30 / pack</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Eye+Drops" alt="Eye Drops">
+            </div>
+            <div class="med-body">
+              <h3>Lubricant Eye Drops</h3>
+              <p class="med-desc">Used for dry and irritated eyes</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> EyeCare</p>
+              <div class="med-footer">
+                <span class="price">৳ 120</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="med-card">
+            <div class="med-thumb">
+              <img src="https://via.placeholder.com/120x90?text=Antiseptic" alt="Antiseptic">
+            </div>
+            <div class="med-body">
+              <h3>Antiseptic Cream</h3>
+              <p class="med-desc">Used for wounds and burns</p>
+              <p class="med-meta"><strong>Manufacturer:</strong> HealFast</p>
+              <div class="med-footer">
+                <span class="price">৳ 95</span>
+                <div class="actions">
+                  <button class="btn small">Add</button>
+                  <button class="btn outline small">Details</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- .products-grid -->
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="btn outline small">&laquo; Prev</button>
+          <button class="btn small active">1</button>
+          <button class="btn small">2</button>
+          <button class="btn small">3</button>
+          <button class="btn outline small">Next &raquo;</button>
+        </div>
+
+      </section>
+    </main>
+
+  
+  </div>
+
+
+ <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>About PharmaNest</h3>
+      <p>PharmaNest is your one-stop solution for booking doctors, ordering medicines, calling ambulance, and accessing healthcare services online.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support@ehealth.com</p>
+      <p>Phone: +880 1234 567890</p>
+      <p>Address: Cumilla, Bangladesh</p>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section policies">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+<div class="footer-section payments">
+  <h3>We Accept</h3>
+ <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="Mas.png" alt="MasterCard">
+       
+        <img src="bkash.png" alt="Bkash">
+         <img src="nagad.png" alt="Nagad">
+        <img src="Roket.png" alt="Rocket">
+      </div>
+</div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PharmaNest. All Rights Reserved. Design by Nafiz and Afsan.
+  </div>
+</footer>
+     
+  
+</body>
+</html>

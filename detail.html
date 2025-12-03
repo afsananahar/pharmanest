@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Detail</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+    body{background:#f7f9fc;color:#333;}
+    header{background:#2563eb;color:#fff;padding:15px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    header h1{font-size:20px;}
+    nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:14px;}
+    nav a:hover{text-decoration:underline;}
+
+    .container{max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:center;}
+    .container img{width:150px;height:150px;object-fit:contain;margin-bottom:15px;}
+    h2{margin-bottom:10px;}
+    p{margin:8px 0;}
+    .price{font-weight:bold;color:#16a34a;}
+    .old-price{text-decoration:line-through;color:#888;margin-left:8px;}
+    .btn{display:inline-block;margin-top:15px;padding:10px 20px;background:#2563eb;color:#fff;border-radius:8px;text-decoration:none;}
+    .btn:hover{background:#1e40af;}
+
+    @media(max-width:600px){
+      header{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Medicine Detail</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="detail.html">Detail</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="maxpro.jpg" alt="Maxpro">
+    <h2>Maxpro Capsule</h2>
+    <p>Uses: Stomach Pain, Headache, Infections</p>
+    <p>Dosage: Follow doctor's instructions</p>
+    <p class="price">$18.00 <span class="old-price">$22.00</span></p>
+    <a href="checkout.html" class="btn">Add to Cart</a>
+  </div>
+</body>
+</html>

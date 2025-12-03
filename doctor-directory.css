@@ -1,0 +1,456 @@
+
+/* ===== Header ===== */
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: 0.3s;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #4CAF50;
+}
+
+/* ===== Header Right Buttons ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-btn {
+  padding: 8px 16px;
+  border: 1px solid #4CAF50;
+  border-radius: 25px;
+  background-color: white;
+  color: #4CAF50;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+/* ===== Mobile Menu ===== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #000000;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+     background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px); 
+    height: 100%;
+    width: 240px;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .header-right {
+    display: none;
+  }
+}
+
+
+
+
+
+
+.doctor-directory {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.doctor-directory h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* 🔎 Search + Filter */
+.search-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-filter input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+  outline: none;
+}
+
+.search-filter select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Doctor List */
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  display: flex;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid #4CAF50;
+}
+
+.doctor-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #4CAF50;
+}
+
+.doctor-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.book-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #4CAF50;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-btn:hover {
+  background: #005fa3;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+/* 🔹 Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔹 Modal Box */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+/* Form */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.modal-content button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-content button:hover {
+  background: #4CAF50;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctor-card img {
+    margin: 0 0 10px 0;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #28a745; /* Green Theme */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 16px;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-section.social a i {
+  margin-right: 8px;
+  color: #28a745;
+}
+.footer-section.payments {
+  margin-top: 20px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-section.payments h3,
+.footer-section.social h3 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.payment-icons img {
+  height: 35px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.payment-icons img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section.newsletter form {
+    justify-content: center;
+  }
+
+  .footer-section.newsletter input[type="email"] {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .footer-section.newsletter button {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+
+/* Mobile responsive */
+@media (max-width:768px){
+  .banner { height:250px; }
+  .banner h2{ font-size:28px; }
+  .banner p{ font-size:16px; }
+  .review-cards{ flex-direction:column; align-items:center; }
+  .footer-container{ flex-direction:column; align-items:center;text-align:center; }
+}

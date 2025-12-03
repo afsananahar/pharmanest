@@ -1,0 +1,509 @@
+/* ===== Header ===== */
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: 0.3s;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #4CAF50;
+}
+
+/* ===== Header Right Buttons ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-btn {
+  padding: 8px 16px;
+  border: 1px solid #4CAF50;
+  border-radius: 25px;
+  background-color: white;
+  color: #4CAF50;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+/* ===== Mobile Menu ===== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #000000;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+     background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px); 
+    height: 100%;
+    width: 240px;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .header-right {
+    display: none;
+  }
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: #2ecc71;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  border: none;
+  background: #2ecc71;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.tests, .packages, .booking-form, .report-download, 
+.faq, .map, .payment {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tests h2, .packages h2, .booking-form h2, 
+.report-download h2, .faq h2, .map h2, .payment h2 {
+  margin-bottom: 15px;
+  color: #2ecc71;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.book-btn {
+  background: #2ecc71;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #27ae60;
+}
+
+/* Packages */
+.packages .package-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.package {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.package span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2ecc71;
+  margin: 10px 0;
+}
+
+/* Booking Form */
+.booking-form form,
+.report-download form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input,
+.report-download input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-form button,
+.report-download button {
+  background: #2ecc71;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-form button:hover,
+.report-download button:hover {
+  background: #27ae60;
+}
+
+/* Payment Section */
+.payment-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pay-card {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 120px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-card i {
+  font-size: 28px;
+  color: #2ecc71;
+  margin-bottom: 5px;
+}
+
+.pay-card:hover {
+  background: #e1e1e1;
+}
+
+.pay-btn {
+  display: block;
+  margin: auto;
+  padding: 12px 20px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #27ae60;
+}
+
+/* FAQ */
+.faq .faq-item {
+  margin-bottom: 15px;
+}
+
+.faq h3 {
+  margin: 0;
+  color: #333;
+}
+
+/* Map */
+.map iframe {
+  border-radius: 8px;
+}
+
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Live Chat */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.chat-header {
+  background: #2ecc71;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.chat-body {
+  display: none;
+  background: white;
+  padding: 10px;
+  max-height: 250px;
+}
+
+.chat-body.active {
+  display: block;
+}
+
+.chat-body input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #28a745; /* Green Theme */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 16px;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-section.social a i {
+  margin-right: 8px;
+  color: #28a745;
+}
+.footer-section.payments {
+  margin-top: 20px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-section.payments h3,
+.footer-section.social h3 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.payment-icons img {
+  height: 35px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.payment-icons img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section.newsletter form {
+    justify-content: center;
+  }
+
+  .footer-section.newsletter input[type="email"] {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .footer-section.newsletter button {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+
+/* Mobile responsive */
+@media (max-width:768px){
+  .banner { height:250px; }
+  .banner h2{ font-size:28px; }
+  .banner p{ font-size:16px; }
+  .review-cards{ flex-direction:column; align-items:center; }
+  .footer-container{ flex-direction:column; align-items:center;text-align:center; }
+}

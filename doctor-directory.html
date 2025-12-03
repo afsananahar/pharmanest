@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Directory - Cumilla</title>
+  <link rel="stylesheet" href="doctor-directory.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+ <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="PH1.png" alt="PharmaNest Logo">
+      <span>PharmaNest</span>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="doctor-directory.html">Doctors</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="Medicine.html">Medicine</a></li>
+        <li><a href="lab-test.html">Lab Test</a></li>
+        <li><a href="ambulance.html">Ambulance</a></li>
+        <li><a href="home-service.html">Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="header-right">
+      <button class="lang-btn" onclick="switchLanguage()">EN | বাংলা</button>
+     
+    </div>
+  </header>
+
+  
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.querySelector('i').classList.toggle('fa-bars');
+      menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+
+
+
+<body>
+
+  <section class="doctor-directory">
+    <h1>Find Specialist Doctors in Cumilla</h1>
+
+    <!-- 🔎 Search & Filter -->
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="Search by Name or Speciality...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Gynecology">Gynecology</option>
+        <option value="Dentistry">Dentistry</option>
+        <option value="General Physician">General Physician</option>
+      </select>
+    </div>
+
+    <!-- Doctor List -->
+    <div class="doctor-list" id="doctorList">
+
+      <!-- Doctor Card -->
+      <div class="doctor-card" data-category="Cardiology">
+        <img src="doctor1.jpg" alt="Dr. Ahmed">
+        <div class="doctor-info">
+          <h2>Dr. Md. Ahmed</h2>
+          <p><i class="fas fa-stethoscope"></i> Cardiologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, FCPS (Cardiology)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla Medical Center</p>
+          <p><i class="fas fa-clock"></i> Sun–Thu (5:00 PM – 9:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 017XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+
+        <!-- Doctor Card -->
+      <div class="doctor-card" data-category="Cardiology">
+        <img src="doctor1.jpg" alt="Dr. Ahmed">
+        <div class="doctor-info">
+          <h2>Dr. Md. Ahmed</h2>
+          <p><i class="fas fa-stethoscope"></i> Cardiologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, FCPS (Cardiology)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla Medical Center</p>
+          <p><i class="fas fa-clock"></i> Sun–Thu (5:00 PM – 9:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 017XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+  <!-- Doctor Card -->
+      <div class="doctor-card" data-category="Cardiology">
+        <img src="doctor1.jpg" alt="Dr. Ahmed">
+        <div class="doctor-info">
+          <h2>Dr. Md. Ahmed</h2>
+          <p><i class="fas fa-stethoscope"></i> Cardiologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, FCPS (Cardiology)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla Medical Center</p>
+          <p><i class="fas fa-clock"></i> Sun–Thu (5:00 PM – 9:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 017XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+  <!-- Doctor Card -->
+      <div class="doctor-card" data-category="Cardiology">
+        <img src="doctor1.jpg" alt="Dr. Ahmed">
+        <div class="doctor-info">
+          <h2>Dr. Md. Ahmed</h2>
+          <p><i class="fas fa-stethoscope"></i> Cardiologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, FCPS (Cardiology)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla Medical Center</p>
+          <p><i class="fas fa-clock"></i> Sun–Thu (5:00 PM – 9:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 017XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+
+
+      <!-- Another Doctor -->
+      <div class="doctor-card" data-category="Neurology">
+        <img src="doctor2.jpg" alt="Dr. Nahar">
+        <div class="doctor-info">
+          <h2>Dr. Farzana Nahar</h2>
+          <p><i class="fas fa-stethoscope"></i> Neurologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, MD (Neurology)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla United Hospital</p>
+          <p><i class="fas fa-clock"></i> Mon–Fri (4:00 PM – 8:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 018XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+
+       <!-- 📌 Appointment Popup Modal -->
+  <div class="modal" id="appointmentModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2 id="doctorName">Book Appointment</h2>
+      <form id="appointmentForm">
+        <input type="text" id="patientName" placeholder="Your Name" required>
+        <input type="text" id="patientPhone" placeholder="Contact Number" required>
+        <input type="date" id="appointmentDate" required>
+        <input type="time" id="appointmentTime" required>
+        <button type="submit">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+  
+
+      <!-- Example Doctor -->
+      <div class="doctor-card" data-category="Dermatology">
+        <img src="doctor3.jpg" alt="Dr. Rahman">
+        <div class="doctor-info">
+          <h2>Dr. Kamal Rahman</h2>
+          <p><i class="fas fa-stethoscope"></i> Dermatologist</p>
+          <p><i class="fas fa-user-graduate"></i> MBBS, DDV (Skin Specialist)</p>
+          <p><i class="fas fa-hospital"></i> Cumilla Skin Care Clinic</p>
+          <p><i class="fas fa-clock"></i> Sat–Wed (3:00 PM – 7:00 PM)</p>
+          <p><i class="fas fa-phone"></i> 019XXXXXXXX</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+  <script src="doctor.js"></script>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>About PharmaNest</h3>
+      <p>PharmaNest is your one-stop solution for booking doctors, ordering medicines, calling ambulance, and accessing healthcare services online.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support@ehealth.com</p>
+      <p>Phone: +880 1234 567890</p>
+      <p>Address: Cumilla, Bangladesh</p>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section policies">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+<div class="footer-section payments">
+  <h3>We Accept</h3>
+ <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="Mas.png" alt="MasterCard">
+       
+        <img src="bkash.png" alt="Bkash">
+         <img src="nagad.png" alt="Nagad">
+        <img src="Roket.png" alt="Rocket">
+      </div>
+</div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PharmaNest. All Rights Reserved. Design by Nafiz and Afsan.
+  </div>
+</footer>
+</body>
+</html>

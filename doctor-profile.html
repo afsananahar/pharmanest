@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Profile</title>
+<link rel="stylesheet" href="doctor-directory.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-card" id="profileCard">
+      <!-- Dynamic content will load here -->
+    </div>
+  </div>
+
+<script>
+const profileCard = document.getElementById('profileCard');
+const doctorData = JSON.parse(localStorage.getItem('doctorProfile'));
+
+if(doctorData){
+  profileCard.innerHTML = `
+    <div class="profile-header">
+      <img src="${doctorData.img}" alt="${doctorData.name}">
+      <h2>${doctorData.name}</h2>
+      <p>${doctorData.specialty} | ${doctorData.location}</p>
+      <div class="rating">${'<i class="fas fa-star"></i>'.repeat(Math.floor(doctorData.rating))}</div>
+    </div>
+
+    <div class="profile-info">
+      <h3>About Doctor</h3>
+      <p>${doctorData.name} is a professional ${doctorData.specialty} with ${doctorData.experience}. Known for excellent patient care.</p>
+
+      <h3>Experience</h3>
+      <p>${doctorData.experience}</p>
+
+      <h3>Education</h3>
+      <p>${doctorData.education.replace(/;/g,'<br>')}</p>
+
+      <h3>Services</h3>
+      <p>${doctorData.services.replace(/,/g,'<br>')}</p>
+
+      <h3>Contact & Appointment</h3>
+      <p>Email: ${doctorData.email}</p>
+      <p>Phone: ${doctorData.phone}</p>
+      <button class="btn">Book Appointment</button>
+    </div>
+  `;
+}else{
+  profileCard.innerHTML = '<p>Doctor data not found. Please go back to directory.</p>';
+}
+</script>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>About PharmaNest</h3>
+      <p>PharmaNest is your one-stop solution for booking doctors, ordering medicines, calling ambulance, and accessing healthcare services online.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support@ehealth.com</p>
+      <p>Phone: +880 1234 567890</p>
+      <p>Address: Cumilla, Bangladesh</p>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section policies">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+<div class="footer-section payments">
+  <h3>We Accept</h3>
+ <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="Mas.png" alt="MasterCard">
+       
+        <img src="bkash.png" alt="Bkash">
+         <img src="nagad.png" alt="Nagad">
+        <img src="Roket.png" alt="Rocket">
+      </div>
+</div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PharmaNest. All Rights Reserved. Design by Nafiz and Afsan.
+  </div>
+</footer>
+</body>
+</html>

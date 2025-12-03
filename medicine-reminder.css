@@ -1,0 +1,296 @@
+body 
+{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* ===== Dark Mode Toggle Button ===== */
+.dark-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: 2px solid currentColor;
+  color: inherit;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Optional: Section Dark Adjustments ===== */
+header.dark-mode,
+footer.dark-mode,
+section.dark-mode {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+
+
+{
+  position: relative;
+  overflow-x: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 30px;
+  color: rgba(4, 40, 79, 0.92); /* subtle blue */
+  animation-name: float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: 0.3s;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #4CAF50;
+}
+
+/* ===== Header Right Buttons ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-btn {
+  padding: 8px 16px;
+  border: 1px solid #4CAF50;
+  border-radius: 25px;
+  background-color: white;
+  color: #4CAF50;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+/* ===== Mobile Menu ===== */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #000000;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+     background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px); 
+    height: 100%;
+    width: 240px;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .header-right {
+    display: none;
+  }
+}
+
+
+
+
+
+/* General Page Style */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #e8f0f8);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+h1 {
+  margin-top: 40px;
+  color: #4CAF50;
+  text-align: center;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+}
+
+/* Form Container */
+form {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 35px;
+  margin: 15px;
+  width: 90%;
+  max-width: 400px;
+  transition: 0.3s ease;
+}
+
+/* Input Labels */
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="time"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: ;
+  box-shadow: 0 0 5px rgba(43, 93, 165, 0.3);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  background: #2b5da5;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1f4782;
+  transform: scale(1.02);
+}
+
+/* Link */
+a {
+  text-decoration: none;
+  color: #2b5da5;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  form {
+    padding: 20px;
+  }
+}

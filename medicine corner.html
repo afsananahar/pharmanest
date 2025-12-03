@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Corner</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      width: 350px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+
+    /* Category Filters */
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .slider {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    /* Search Results */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+
+    .item p {
+      font-size: 13px;
+      margin: 4px 0;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #16a34a;
+    }
+
+    /* Medicine Detail */
+    .detail img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .detail p {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: white;
+      font-size: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: #1e40af;
+    }
+
+    /* Checkout */
+    .checkout img {
+      width: 120px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .checkout label {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .checkout input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+
+    .payment {
+      margin: 12px 0;
+    }
+
+    .payment label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1: Medicine Corner -->
+  <div class="card">
+    <div class="header">
+      <h2>Medicine Corner</h2>
+      <div class="search"><input type="text" placeholder="Search"></div>
+    </div>
+    <div class="filters">
+      <span>Category</span>
+      <span>All Medicines</span>
+      <span>Brand</span>
+      <span>Price</span>
+    </div>
+    <input type="range" min="5" max="50" value="16" class="slider">
+    <div class="grid">
+      <div class="item">
+        <img src="napa.png" alt="All">
+        <p>All Medicines</p>
+        <p class="price">$15.00</p>
+      </div>
+      <div class="item">
+        <img src="maxpro.jpg" alt="Pet">
+        <p>humsn medicine</p>
+        <p class="price">$15.00</p>
+      </div>
+      <div class="item">
+        <img src="lyca75.png" alt="Gym">
+        <p>Gym Supplements</p>
+        <p class="price">$16.00</p>
+      </div>
+      <div class="item">
+        <img src="https://via.placeholder.com/100" alt="Supp">
+        <p>More Medicine</p>
+        <p class="price">$16.00</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 2: Medicine Detail -->
+  <div class="card detail">
+    <img src="https://via.placeholder.com/150" alt="Med">
+    <h2>Medicine Detail</h2>
+    <p>Uses: Stomach Pain, Headache, Infections</p>
+    <p>Dosage: Follow instructions</p>
+    <p class="price">$15.00 <span class="old-price">$19.00</span></p>
+    <a href="#" class="btn">Add to Cart</a>
+  </div>
+
+  <!-- Page 3: Cart Checkout -->
+  <div class="card checkout">
+    <img src="https://via.placeholder.com/120" alt="Cart">
+    <h2>Cart Checkout</h2>
+    <label>Summary Address</label>
+    <input type="text" placeholder="Medivery Address">
+    <label>Delivery Address</label>
+    <input type="text" placeholder="Enter your address">
+    <p class="price">$16.00</p>
+    <div class="payment">
+      <label><input type="radio" name="pay" checked> Online - $16.00</label>
+      <label><input type="radio" name="pay"> Offline</label>
+      <label><input type="radio" name="pay"> Cash on Delivery</label>
+    </div>
+    <a href="#" class="btn">Confirm Order</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* auth.css - For both Login and Register Pages */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 30px;
+    color: #4CAF50;
+    font-size: 28px;
+}
+
+.auth-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.auth-container input,
+.auth-container select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.auth-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.auth-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-container p a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 30px 20px;
+    }
+
+    .auth-container h2 {
+        font-size: 24px;
+    }
+
+    .auth-container button {
+        font-size: 16px;
+    }
+}
+/* Mobile Responsive adjustments for auth pages */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .auth-container h2 {
+        font-size: 26px;
+    }
+
+    .auth-container input,
+    .auth-container select,
+    .auth-container button {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    .auth-container button {
+        margin-top: 15px;
+    }
+
+    .auth-container p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .auth-container h2 {
+        font-size: 22px;
+    }
+
+    .auth-container input,
+    .auth-container select,
+    .auth-container button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .auth-container p {
+        font-size: 12px;
+    }
+}

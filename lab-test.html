@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Test</title>
+  <link rel="stylesheet" href="lab-test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="PH1.png" alt="PharmaNest Logo">
+      <span>PharmaNest</span>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="doctor-directory.html">Doctors</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="Medicine.html">Medicine</a></li>
+        <li><a href="lab-test.html">Lab Test</a></li>
+        <li><a href="ambulance.html">Ambulance</a></li>
+        <li><a href="home-service.html">Services</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="header-right">
+      <button class="lang-btn" onclick="switchLanguage()">EN | বাংলা</button>
+     
+    </div>
+  </header>
+
+ 
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.querySelector('i').classList.toggle('fa-bars');
+      menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+
+
+  <header>
+    <h1>🧪 Lab Test & Packages</h1>
+    <p>Book your medical tests online with home sample collection.</p>
+  </header>
+
+  <!-- Search -->
+  <section class="search-bar">
+    <input type="text" placeholder="Search Test (e.g., CBC, Blood Sugar)">
+    <button><i class="fas fa-search"></i></button>
+  </section>
+
+  <!-- Popular Tests -->
+  <section class="tests">
+    <h2>Popular Tests</h2>
+    <table>
+      <tr>
+        <th>Test Name</th>
+        <th>Price (৳)</th>
+        <th>Report Time</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>CBC (Complete Blood Count)</td>
+        <td>500</td>
+        <td>24 hrs</td>
+        <td><button class="book-btn">Book</button></td>
+      </tr>
+      <tr>
+        <td>Blood Sugar (Fasting)</td>
+        <td>300</td>
+        <td>2 hrs</td>
+        <td><button class="book-btn">Book</button></td>
+      </tr>
+      <tr>
+        <td>Lipid Profile</td>
+        <td>1200</td>
+        <td>48 hrs</td>
+        <td><button class="book-btn">Book</button></td>
+      </tr>
+      <tr>
+        <td>Thyroid (TSH)</td>
+        <td>700</td>
+        <td>24 hrs</td>
+        <td><button class="book-btn">Book</button></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Packages -->
+  <section class="packages">
+    <h2>Health Packages</h2>
+    <div class="package-list">
+      <div class="package">
+        <h3>Full Body Checkup</h3>
+        <p>Includes CBC, Blood Sugar, Lipid, Thyroid</p>
+        <span>৳ 2500</span>
+        <button class="book-btn">Book</button>
+      </div>
+      <div class="package">
+        <h3>Diabetes Care</h3>
+        <p>Includes Fasting Sugar, HbA1c, Kidney Function</p>
+        <span>৳ 1800</span>
+        <button class="book-btn">Book</button>
+      </div>
+      <div class="package">
+        <h3>Heart Checkup</h3>
+        <p>Includes Lipid, ECG, Blood Pressure</p>
+        <span>৳ 3000</span>
+        <button class="book-btn">Book</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Test</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="date" required>
+      <input type="text" placeholder="Address (for home collection)">
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <!-- Payment Gateway -->
+  <section class="payment">
+    <h2>💳 Pay Online</h2>
+    <div class="payment-options">
+      <div class="pay-card">
+        <i class="fas fa-mobile-alt"></i>
+        <p>bKash</p>
+      </div>
+      <div class="pay-card">
+        <i class="fas fa-wallet"></i>
+        <p>Nagad</p>
+      </div>
+      <div class="pay-card">
+        <i class="fas fa-credit-card"></i>
+        <p>Credit/Debit Card</p>
+      </div>
+    </div>
+    <button class="pay-btn">Proceed to Payment</button>
+  </section>
+
+  <!-- Download Report -->
+  <section class="report-download">
+    <h2>📄 Download Report</h2>
+    <form>
+      <input type="text" placeholder="Enter Booking ID" required>
+      <input type="tel" placeholder="Registered Phone Number" required>
+      <button type="submit">Download Report</button>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How to book a test?</h3>
+      <p>You can search and book any test online using our booking form.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is home sample collection available?</h3>
+      <p>Yes, we provide home collection services at no extra cost within city area.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How will I get my report?</h3>
+      <p>You can download reports online or collect from our center.</p>
+    </div>
+  </section>
+
+  <!-- Map Integration -->
+  <section class="map">
+    <h2>📍 Our Location</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.845779018157!2d91.1809!3d23.4683"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Contact -->
+  <footer>
+    <p>📍 Location: Cumilla Diagnostic Center</p>
+    <p>📞 Helpline: 01800-123456</p>
+    <p>📧 Email: support@ehealth.com</p>
+  </footer>
+
+  <!-- Live Chat -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header" onclick="toggleChat()">💬 Live Chat</div>
+    <div class="chat-body" id="chatBody">
+      <p><strong>Support:</strong> Hello! How can we help you?</p>
+      <input type="text" placeholder="Type your message...">
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      document.getElementById('chatBody').classList.toggle('active');
+    }
+  </script>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-section about">
+      <h3>About PharmaNest</h3>
+      <p>PharmaNest is your one-stop solution for booking doctors, ordering medicines, calling ambulance, and accessing healthcare services online.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: support@ehealth.com</p>
+      <p>Phone: +880 1234 567890</p>
+      <p>Address: Cumilla, Bangladesh</p>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section policies">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+<div class="footer-section payments">
+  <h3>We Accept</h3>
+ <div class="payment-icons">
+        <img src="visa.png" alt="Visa">
+        <img src="Mas.png" alt="MasterCard">
+       
+        <img src="bkash.png" alt="Bkash">
+         <img src="nagad.png" alt="Nagad">
+        <img src="Roket.png" alt="Rocket">
+      </div>
+</div>
+
+    
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 PharmaNest. All Rights Reserved. Design by Nafiz and Afsan.
+  </div>
+</footer>
+
+</body>
+</html>
